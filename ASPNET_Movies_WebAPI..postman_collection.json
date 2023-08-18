@@ -28,11 +28,23 @@
 		},
 		{
 			"name": "GetID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:5205/api/Movies",
+					"raw": "http://localhost:5205/api/Movies/11",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -40,7 +52,8 @@
 					"port": "5205",
 					"path": [
 						"api",
-						"Movies"
+						"Movies",
+						"11"
 					]
 				}
 			},
@@ -53,7 +66,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Title\" : \"Lord of the Rings Fellowship of The Rings\",\r\n    \"RunningTime\" : 354,\r\n    \"Genre\" : \"Fantasy\"\r\n}",
+					"raw": "{\r\n    \"Title\" : \"Lord of the Rings Return Of The\",\r\n    \"RunningTime\" : 390,\r\n    \"Genre\" : \"Fantasy & Action\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -81,7 +94,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5205/api/Movies/1",
+					"raw": "http://localhost:5205/api/Movies/12",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -90,7 +103,7 @@
 					"path": [
 						"api",
 						"Movies",
-						"1"
+						"12"
 					]
 				}
 			},
@@ -103,7 +116,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Title\" : \"Lord of the Rings The Two Towers\",\r\n    \"RunningTime\" : 185,\r\n    \"Genre\" : \"Fantasy\"\r\n}",
+					"raw": "{\r\n    \"Title\" : \"Lord of the Rings Return Of The King\",\r\n    \"RunningTime\" : 390,\r\n    \"Genre\" : \"Fantasy & Action\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -111,7 +124,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5205/api/Movies/1",
+					"raw": "http://localhost:5205/api/Movies/11",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -120,7 +133,7 @@
 					"path": [
 						"api",
 						"Movies",
-						"1"
+						"11"
 					]
 				}
 			},

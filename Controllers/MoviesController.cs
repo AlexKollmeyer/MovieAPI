@@ -54,7 +54,10 @@ namespace MoviesAPI.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] Movie movie)
         {
-            _context.Movies.Update(movie);
+            var movieToUpdate = _context.Movies.FirstOrDefault(m => m.id == id);
+            movieToUpdate.title = movie.title;
+            movieToUpdate.runningTime = movie.runningTime;
+            movieToUpdate.genre = movie.genre;
             _context.SaveChanges();
             return Ok(movie);
         }
