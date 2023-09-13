@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using MoviesAPI.Data;
+using MoviesAPI.Extensions;
 
 namespace MoviesAPI
 {
@@ -11,7 +12,7 @@ namespace MoviesAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.ConfigureCors();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -27,7 +28,7 @@ namespace MoviesAPI
 
 
             var app = builder.Build();
-
+            app.UseCors("CorsPolicy");
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
